@@ -19,7 +19,7 @@ const HeroSlide = ({ slide, isActive }) => {
         <img
           src={slide.image}
           alt={slide.imageAlt}
-          className="w-full h-full object-cover scale-[0.95] md:scale-100 transition-transform duration-500"
+          className="w-full h-full object-contain"
           loading="eager"
           fetchPriority={slide.id === 1 ? "high" : "auto"}
         />
