@@ -13,9 +13,10 @@ const HeroSlider = () => {
   
   // Preload images
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
     heroSlides.forEach((slide) => {
       const img = new Image();
-      img.src = slide.image;
+      img.src = isMobile && slide.mobileImage ? slide.mobileImage : slide.image;
     });
   }, []);
 

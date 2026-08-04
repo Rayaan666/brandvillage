@@ -12,13 +12,18 @@ const HeroSlide = ({ slide, isActive }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <img
-        src={slide.image}
-        alt={slide.imageAlt}
-        className="w-full h-full object-contain"
-        loading="eager"
-        fetchPriority={slide.id === 1 ? "high" : "auto"}
-      />
+      <picture className="w-full h-full">
+        {slide.mobileImage && (
+          <source media="(max-width: 767px)" srcSet={slide.mobileImage} />
+        )}
+        <img
+          src={slide.image}
+          alt={slide.imageAlt}
+          className="w-full h-full object-contain"
+          loading="eager"
+          fetchPriority={slide.id === 1 ? "high" : "auto"}
+        />
+      </picture>
     </motion.div>
   );
 };
