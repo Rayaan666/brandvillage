@@ -68,7 +68,9 @@ const Navbar = () => {
           {/* Right CTA */}
           <div className="hidden lg:flex items-center space-x-6">
             <a
-              href="#location"
+              href="https://www.google.com/maps/place/Brand+village+outlet/@25.2638788,55.3165515,17z/data=!4m6!3m5!1s0x3e5f5d0005e2ab7b:0xfc733466a6642162!8m2!3d25.2638788!4d55.3165515!16s%2Fg%2F11wsp0s4h2"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 bg-brandPrimary text-white px-5 py-2.5 rounded-none font-semibold text-sm hover:bg-brandYellow hover:text-brandPrimary transition-all duration-300"
             >
               <MapPin className="w-4 h-4" />
@@ -133,7 +135,9 @@ const Navbar = () => {
 
             <div className="p-6 border-t border-brandBorder">
               <a
-                href="#location"
+                href="https://www.google.com/maps/place/Brand+village+outlet/@25.2638788,55.3165515,17z/data=!4m6!3m5!1s0x3e5f5d0005e2ab7b:0xfc733466a6642162!8m2!3d25.2638788!4d55.3165515!16s%2Fg%2F11wsp0s4h2"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 bg-brandPrimary text-white py-4 rounded-none font-semibold text-lg"
               >

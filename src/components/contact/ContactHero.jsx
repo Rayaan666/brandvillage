@@ -100,7 +100,7 @@ const ContactHero = () => {
               <img 
                 src="https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/MFD05529_portrait_square_euzcq7" 
                 alt="Brand Village Outlet Store" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-right"
               />
               <div className="absolute inset-0 bg-black/5 mix-blend-multiply"></div>
             </div>

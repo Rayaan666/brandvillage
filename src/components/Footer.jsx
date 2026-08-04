@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="w-full bg-[#111111] text-white pt-20 pb-10 border-t border-white/10 mt-auto">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
         
         {/* Brand Section */}
         <div className="flex flex-col items-start gap-6">
@@ -29,25 +29,6 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/contact" className="hover:text-brandYellow transition-colors">Contact Us</Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Shopping Categories */}
-        <div className="flex flex-col gap-5">
-          <h3 className="text-brandYellow font-bold text-sm tracking-wider uppercase">Shop Categories</h3>
-          <ul className="flex flex-col gap-3 text-white/70 text-sm font-medium">
-            <li>
-              <Link to="/store?category=Fashion" className="hover:text-brandYellow transition-colors">Fashion</Link>
-            </li>
-            <li>
-              <Link to="/store?category=Footwear" className="hover:text-brandYellow transition-colors">Footwear</Link>
-            </li>
-            <li>
-              <Link to="/store?category=Accessories" className="hover:text-brandYellow transition-colors">Accessories</Link>
-            </li>
-            <li>
-              <Link to="/store?category=Beauty" className="hover:text-brandYellow transition-colors">Beauty & Skincare</Link>
             </li>
           </ul>
         </div>
