@@ -19,7 +19,7 @@ const HeroSlide = ({ slide, isActive }) => {
         <img
           src={slide.image}
           alt={slide.imageAlt}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
           loading="eager"
           fetchPriority={slide.id === 1 ? "high" : "auto"}
         />
