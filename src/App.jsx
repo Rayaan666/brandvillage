@@ -5,21 +5,25 @@ import HomePage from './pages/HomePage';
 import StorePage from './pages/StorePage';
 import ProductPage from './pages/ProductPage';
 import ContactPage from './pages/ContactPage';
+import FloatingWhatsAppButton from './components/store/FloatingWhatsAppButton';
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-brandLight flex flex-col">
+      <div className="min-h-screen bg-brandLight flex flex-col relative">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/store" element={<StorePage />} />
           <Route path="/store/:productSlug" element={<ProductPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        <FloatingWhatsAppButton />
       </div>
     </BrowserRouter>
   );
 }
 
 export default App;
+
+

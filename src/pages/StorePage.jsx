@@ -5,7 +5,6 @@ import StoreHero from '../components/store/StoreHero';
 import CollectionShowcase from '../components/store/CollectionShowcase';
 import StoreVisitBanner from '../components/store/StoreVisitBanner';
 import StoreWhatsAppCTA from '../components/store/StoreWhatsAppCTA';
-import FloatingWhatsAppButton from '../components/store/FloatingWhatsAppButton';
 
 const StorePage = () => {
   return (
@@ -20,10 +19,9 @@ const StorePage = () => {
       </main>
 
       <Footer />
-
-      <FloatingWhatsAppButton />
     </div>
   );
 };
 
 export default StorePage;
+
