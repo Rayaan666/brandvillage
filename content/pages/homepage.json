@@ -8,7 +8,7 @@
   ],
   "aboutSection": {
     "eyebrow": "01 — ABOUT BRAND VILLAGE",
-    "subTitle": "BEYOND OUTLET SHOPPING",
+    "subTitle": "BEYOND OUTLET SHOPPINGG",
     "titleLine1": "More Than Great Prices. ",
     "titleLine2": "A Better Way to Discover Brands. ",
     "description": "Brand Village Outlet brings together recognised brands, exciting discoveries, and exceptional outlet value in one welcoming destination designed for everyone.",
@@ -32,7 +32,7 @@
       "title": "Who We Are",
       "description": "A modern outlet destination bringing sought-after brands, thoughtful service, and rewarding value together under one roof.",
       "supportingText": "Trusted brands. Genuine value.",
-      "image": "/home/why%20choose/1.png",
+      "image": "/uploads/home/why%20choose/1.png",
       "imageAlt": "A stylish retail exterior or wide interior view",
       "href": "/about"
     },
@@ -42,7 +42,7 @@
       "title": "What We Do",
       "description": "We curate fashion, footwear, accessories, and lifestyle collections so customers can discover more while spending less.",
       "supportingText": "Curated for discovery.",
-      "image": "/home/why%20choose/2.png",
+      "image": "/uploads/home/why%20choose/2.png",
       "imageAlt": "An organised fashion retail floor",
       "href": "/about#experience"
     },
@@ -52,7 +52,7 @@
       "title": "Why Choose Us",
       "description": "Because outstanding prices matter more when they are paired with variety, trust, convenience, and an enjoyable store experience.",
       "supportingText": "More choice. Better value.",
-      "image": "/home/why%20choose/3.png",
+      "image": "/uploads/home/why%20choose/3.png",
       "imageAlt": "Happy customers interacting inside a premium outlet environment",
       "href": "/about#why-us"
     }
