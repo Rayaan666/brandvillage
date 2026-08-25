@@ -15,7 +15,7 @@ export default defineConfig({
 
   build: {
     outputFolder: "admin",
-    publicFolder: "public",
+    publicFolder: isLocal ? "public" : "dist",
   },
   media: {
     tina: {
