@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const CollectionIntro = () => {
+const CollectionIntro = ({ intro }) => {
+  if (!intro) return null;
+
   return (
     <section className="w-full bg-brandWarm pt-6 pb-4 md:pt-10 md:pb-6 px-6 relative flex flex-col items-center justify-center">
       <div className="max-w-[700px] w-full text-center flex flex-col items-center relative z-10">
@@ -14,7 +16,7 @@ const CollectionIntro = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-xs md:text-sm tracking-[0.2em] font-medium text-brandMuted uppercase mb-3 block"
         >
-          EXPLORE OUR COLLECTIONS
+          {intro.subheading}
         </motion.span>
         
         {/* Heading */}
@@ -25,7 +27,7 @@ const CollectionIntro = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="text-3xl md:text-5xl font-extrabold tracking-tight text-brandPrimary mb-4 leading-[1.1]"
         >
-          Find Something<br />For <span className="text-[#F4C430] italic font-semibold">Everyone.</span>
+          {intro.headingLine1}<br />{intro.headingLine2} <span className="text-[#F4C430] italic font-semibold">{intro.headingHighlight}</span>
         </motion.h2>
         
         {/* Supporting Text */}
@@ -36,7 +38,7 @@ const CollectionIntro = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           className="text-sm md:text-base text-brandMuted leading-relaxed mb-6 max-w-[600px]"
         >
-          From everyday essentials to stylish fashion and home inspiration, discover carefully curated collections designed for every member of the family.
+          {intro.description}
         </motion.p>
         
         {/* Animated Divider */}

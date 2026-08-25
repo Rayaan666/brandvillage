@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "tinacms dev -c \"vite\"",
+    "build": "tinacms build --local --skip-cloud-checks && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "tinacms build --local --skip-cloud-checks && vite preview"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
+    "@tinacms/cli": "^2.6.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
@@ -25,6 +26,7 @@
     "oxlint": "^1.71.0",
     "postcss": "^8.5.23",
     "tailwindcss": "^4.3.3",
+    "tinacms": "^3.12.1",
     "vite": "^8.1.1"
   }
 }

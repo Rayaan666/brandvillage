@@ -3,7 +3,12 @@ import { motion } from 'framer-motion';
 import FeatureGrid from './FeatureGrid';
 import FeatureCTA from './FeatureCTA';
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ content, featuresList, ctaSection }) => {
+  const eyebrow = content?.eyebrow || "WHY CHOOSE US";
+  const titleLine1 = content?.titleLine1 || "What Makes Brand Village";
+  const titleLine2 = content?.titleLine2 || "Different";
+  const description = content?.description || "Discover why thousands of shoppers continue returning for exceptional brands, exciting discoveries and unmatched everyday value.";
+
   return (
     <section
       id="why-choose-us"
@@ -45,7 +50,7 @@ const WhyChooseUs = () => {
           className="text-brandMuted text-[11px] font-bold tracking-[0.3em] uppercase mb-5 flex items-center gap-4"
         >
           <span className="w-8 h-px bg-brandYellow" />
-          WHY CHOOSE US
+          {eyebrow}
           <span className="w-8 h-px bg-brandYellow" />
         </motion.p>
 
@@ -59,7 +64,7 @@ const WhyChooseUs = () => {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             >
-              What Makes Brand Village
+              {titleLine1}
             </motion.span>
           </span>
           <span className="block overflow-hidden pb-2">
@@ -70,7 +75,7 @@ const WhyChooseUs = () => {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             >
-              <span className="text-brandYellow">Different</span>
+              <span className="text-brandYellow">{titleLine2}</span>
             </motion.span>
           </span>
         </h2>
@@ -83,7 +88,7 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-brandMuted text-[17px] lg:text-[19px] leading-relaxed max-w-[680px] mb-8 font-medium"
         >
-          Discover why thousands of shoppers continue returning for exceptional brands, exciting discoveries and unmatched everyday value.
+          {description}
         </motion.p>
 
         {/* Animated yellow divider */}
@@ -97,10 +102,10 @@ const WhyChooseUs = () => {
       </div>
 
       {/* ── Feature Grid ── */}
-      <FeatureGrid />
+      <FeatureGrid featuresList={featuresList} />
 
       {/* ── Bottom CTA ── */}
-      <FeatureCTA />
+      <FeatureCTA content={ctaSection} />
     </section>
   );
 };

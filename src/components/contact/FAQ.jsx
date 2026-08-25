@@ -58,8 +58,11 @@ const FAQItem = ({ faq, isOpen, onClick }) => {
   );
 };
 
-const FAQ = () => {
+const FAQ = ({ content }) => {
   const [openIndex, setOpenIndex] = useState(0);
+  const eyebrow = content?.eyebrow || "Support";
+  const title = content?.title || "Frequently Asked Questions";
+  const faqList = content?.faqs || faqs;
 
   return (
     <section className="w-full bg-white pt-6 pb-12 lg:pt-8 lg:pb-16">
@@ -76,7 +79,7 @@ const FAQ = () => {
           >
             <span className="w-8 h-px bg-brandYellow"></span>
             <span className="text-brandMuted text-[11px] font-bold tracking-[0.25em] uppercase">
-              Support
+              {eyebrow}
             </span>
             <span className="w-8 h-px bg-brandYellow"></span>
           </motion.div>
@@ -87,7 +90,7 @@ const FAQ = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-brandPrimary font-extrabold text-4xl lg:text-5xl tracking-tight"
           >
-            Frequently Asked Questions
+            {title}
           </motion.h2>
         </div>
 
@@ -98,7 +101,7 @@ const FAQ = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {faqs.map((faq, index) => (
+          {faqList.map((faq, index) => (
             <FAQItem 
               key={index}
               faq={faq}

@@ -3,7 +3,12 @@ import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 import { createWhatsAppGeneralUrl } from '../../utils/whatsapp';
 
-const StoreWhatsAppCTA = () => {
+const StoreWhatsAppCTA = ({ content }) => {
+  const title = content?.title || "Looking for Something Specific?";
+  const description = content?.description || "Send us a message with the product, category, size, colour or style you are looking for, and our team will assist you.";
+  const buttonText = content?.buttonText || "Chat With Us on WhatsApp";
+  const noteText = content?.noteText || "We’ll help you check availability and product details.";
+
   return (
     <div className="w-full bg-[#1B1B1B] py-10 md:py-14 relative overflow-hidden">
       {/* Large outlined WhatsApp icon as background */}
@@ -19,7 +24,7 @@ const StoreWhatsAppCTA = () => {
           transition={{ duration: 0.6 }}
           className="text-white font-extrabold text-[32px] md:text-[42px] lg:text-[48px] tracking-tight mb-5"
         >
-          Looking for Something Specific?
+          {title}
         </motion.h3>
         
         <motion.p
@@ -29,7 +34,7 @@ const StoreWhatsAppCTA = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-white/80 text-[17px] lg:text-[19px] leading-relaxed max-w-[600px] mb-8 font-medium"
         >
-          Send us a message with the product, category, size, colour or style you are looking for, and our team will assist you.
+          {description}
         </motion.p>
 
         <motion.div
@@ -46,10 +51,10 @@ const StoreWhatsAppCTA = () => {
             className="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold text-sm tracking-wide hover:bg-[#20bd5a] hover:scale-105 transition-all duration-300 shadow-lg"
           >
             <MessageCircle className="w-5 h-5" />
-            Chat With Us on WhatsApp
+            {buttonText}
           </a>
           <span className="text-white/50 text-[11px] uppercase tracking-wider font-semibold">
-            We’ll help you check availability and product details.
+            {noteText}
           </span>
         </motion.div>
       </div>

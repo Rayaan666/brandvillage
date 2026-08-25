@@ -1,0 +1,125 @@
+{
+  "heroSlides": [
+    {
+      "image": "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/ChatGPT_Image_Aug_25_2026_02_05_44_AM",
+      "mobileImage": "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/ChatGPT_Image_Aug_25_2026_02_05_44_AM",
+      "imageAlt": "Brand Village Outlet"
+    }
+  ],
+  "aboutSection": {
+    "eyebrow": "01 — ABOUT BRAND VILLAGE",
+    "subTitle": "BEYOND OUTLET SHOPPING",
+    "titleLine1": "More Than Great Prices. ",
+    "titleLine2": "A Better Way to Discover Brands. ",
+    "description": "Brand Village Outlet brings together recognised brands, exciting discoveries, and exceptional outlet value in one welcoming destination designed for everyone.",
+    "linkText": "Discover Our Story"
+  },
+  "purposeSection": {
+    "image": "/uploads/missionvision.png",
+    "visionText": "To become a destination where discovering respected brands, exceptional value, and everyday style always feels exciting.",
+    "missionText": "To make recognised brands more accessible by combining genuine savings, variety, convenience, and an enjoyable shopping experience."
+  },
+  "whyChooseUs": {
+    "eyebrow": "WHY CHOOSE US",
+    "titleLine1": "What Makes Brand Village",
+    "titleLine2": "Different",
+    "description": "Discover why thousands of shoppers continue returning for exceptional brands, exciting discoveries and unmatched everyday value."
+  },
+  "identityCards": [
+    {
+      "number": "01",
+      "label": "OUR IDENTITY",
+      "title": "Who We Are",
+      "description": "A modern outlet destination bringing sought-after brands, thoughtful service, and rewarding value together under one roof.",
+      "supportingText": "Trusted brands. Genuine value.",
+      "image": "/home/why%20choose/1.png",
+      "imageAlt": "A stylish retail exterior or wide interior view",
+      "href": "/about"
+    },
+    {
+      "number": "02",
+      "label": "OUR EXPERIENCE",
+      "title": "What We Do",
+      "description": "We curate fashion, footwear, accessories, and lifestyle collections so customers can discover more while spending less.",
+      "supportingText": "Curated for discovery.",
+      "image": "/home/why%20choose/2.png",
+      "imageAlt": "An organised fashion retail floor",
+      "href": "/about#experience"
+    },
+    {
+      "number": "03",
+      "label": "OUR PROMISE",
+      "title": "Why Choose Us",
+      "description": "Because outstanding prices matter more when they are paired with variety, trust, convenience, and an enjoyable store experience.",
+      "supportingText": "More choice. Better value.",
+      "image": "/home/why%20choose/3.png",
+      "imageAlt": "Happy customers interacting inside a premium outlet environment",
+      "href": "/about#why-us"
+    }
+  ],
+  "features": [
+    {
+      "number": "01",
+      "label": "TRENDS",
+      "title": "Staying Ahead Of Trends",
+      "description": "Our rapid inventory turnover allows customers to discover the newest brands and collections before everyone else.",
+      "iconName": "TrendingUp",
+      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2071&auto=format&fit=crop",
+      "imageAlt": "Fashion racks with newest collections"
+    },
+    {
+      "number": "02",
+      "label": "DISCOVERY",
+      "title": "The Treasure Hunt Experience",
+      "description": "Every visit feels different because our collections change constantly, making each shopping trip exciting and rewarding.",
+      "iconName": "Gem",
+      "image": "https://images.unsplash.com/photo-1555529771-835f59bfc50c?q=80&w=1974&auto=format&fit=crop",
+      "imageAlt": "Customer browsing through premium clothing"
+    },
+    {
+      "number": "03",
+      "label": "SPEED",
+      "title": "Smart Merchandising",
+      "description": "Fast merchandising decisions ensure exciting products arrive quickly, creating fresh experiences every time customers visit.",
+      "iconName": "Zap",
+      "image": "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=2070&auto=format&fit=crop",
+      "imageAlt": "Organised store displays with fast-moving stock"
+    },
+    {
+      "number": "04",
+      "label": "INSIGHT",
+      "title": "Understanding Our Customers",
+      "description": "Everything we do begins with understanding shopper behaviour to create memorable experiences both in-store and online.",
+      "iconName": "Users",
+      "image": "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=2070&auto=format&fit=crop",
+      "imageAlt": "Friendly retail interaction and customer service"
+    },
+    {
+      "number": "05",
+      "label": "PRESENTATION",
+      "title": "Beautifully Curated Displays",
+      "description": "Our merchandising transforms shopping into discovery through inspiring product presentation and thoughtful store layouts.",
+      "iconName": "ShoppingBag",
+      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop",
+      "imageAlt": "Curated premium fashion displays"
+    },
+    {
+      "number": "06",
+      "label": "VALUE",
+      "title": "Unmatched Value",
+      "description": "Exceptional brands, attractive prices and an ever-changing product selection make every purchase feel rewarding.",
+      "iconName": "Sparkles",
+      "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop",
+      "imageAlt": "Shopping bags representing value and purchases"
+    }
+  ],
+  "ctaSection": {
+    "eyebrow": "VISIT US IN STORE",
+    "title": "Experience the Difference Yourself",
+    "description": "Visit Brand Village Outlet and discover why every visit feels like finding something new.",
+    "primaryButtonText": "Explore Our Stores",
+    "primaryButtonUrl": "https://www.google.com/maps/place/Brand+village+outlet/@25.2638788,55.3165515,17z/data=!4m6!3m5!1s0x3e5f5d0005e2ab7b:0xfc733466a6642162!8m2!3d25.2638788!4d55.3165515!16s%2Fg%2F11wsp0s4h2",
+    "secondaryButtonText": "Store",
+    "secondaryButtonUrl": "/store"
+  }
+}

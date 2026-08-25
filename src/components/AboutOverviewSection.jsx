@@ -3,7 +3,7 @@ import SectionIntro from './SectionIntro';
 import PurposeFeature from './PurposeFeature';
 import IdentityCards from './IdentityCards';
 
-const AboutOverviewSection = () => {
+const AboutOverviewSection = ({ aboutSection, purposeSection, identityCards }) => {
   return (
     <section id="about-overview" className="relative w-full bg-[#F5F4F0] overflow-hidden">
       {/* Decorative oversized background word */}
@@ -29,9 +29,9 @@ const AboutOverviewSection = () => {
       </div>
 
       {/* Content Layers */}
-      <SectionIntro />
-      <PurposeFeature />
-      <IdentityCards />
+      <SectionIntro content={aboutSection} />
+      <PurposeFeature content={purposeSection} />
+      <IdentityCards cards={identityCards} />
     </section>
   );
 };

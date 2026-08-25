@@ -2,9 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MessageCircle, MapPin, ArrowUpRight } from 'lucide-react';
 
-const contactMethods = [
+const IconMap = {
+  Phone: Phone,
+  Mail: Mail,
+  MessageCircle: MessageCircle,
+  MapPin: MapPin,
+};
+
+const defaultContactMethods = [
   {
-    icon: <Phone className="w-6 h-6" strokeWidth={1.5} />,
+    iconName: "Phone",
     title: "Phone Support",
     description: "Landline: +971 4 335 3845",
     info: "+971 58 123 4560",
@@ -12,7 +19,7 @@ const contactMethods = [
     link: "tel:+971581234560"
   },
   {
-    icon: <Mail className="w-6 h-6" strokeWidth={1.5} />,
+    iconName: "Mail",
     title: "Email",
     description: "Send us your enquiries",
     info: "info@brandvillage.ae",
@@ -20,7 +27,7 @@ const contactMethods = [
     link: "mailto:info@brandvillage.ae"
   },
   {
-    icon: <MessageCircle className="w-6 h-6" strokeWidth={1.5} />,
+    iconName: "MessageCircle",
     title: "WhatsApp",
     description: "Instant product assistance",
     info: "+971 58 123 4560",
@@ -28,7 +35,7 @@ const contactMethods = [
     link: "https://wa.me/971581234560"
   },
   {
-    icon: <MapPin className="w-6 h-6" strokeWidth={1.5} />,
+    iconName: "MapPin",
     title: "Store Address",
     description: "Al Maktoum Rd, Deira, Dubai",
     info: "Brand Village Outlet",
@@ -50,7 +57,9 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const ContactCards = () => {
+const ContactCards = ({ content }) => {
+  const methods = content || defaultContactMethods;
+
   return (
     <section className="w-full bg-white pt-10 pb-12 lg:pt-12 lg:pb-16 px-6 lg:px-12 relative z-20 -mt-10 lg:-mt-20">
       <div className="w-full max-w-[1440px] mx-auto">
@@ -61,36 +70,39 @@ const ContactCards = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8"
         >
-          {contactMethods.map((method, index) => (
-            <motion.a
-              href={method.link}
-              key={index}
-              variants={itemVariants}
-              className="group flex flex-col bg-white border border-brandBorder rounded-[32px] p-8 lg:p-10 hover:border-brandYellow transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(244,196,48,0.15)] relative overflow-hidden"
-            >
-              {/* Top Row: Icon & Arrow */}
-              <div className="flex justify-between items-start mb-12">
-                <div className="w-14 h-14 rounded-full bg-brandLight flex items-center justify-center text-brandPrimary group-hover:bg-brandYellow group-hover:text-white transition-colors duration-500">
-                  {method.icon}
+          {methods.map((method, index) => {
+            const IconComponent = IconMap[method.iconName] || Phone;
+            return (
+              <motion.a
+                href={method.link}
+                key={index}
+                variants={itemVariants}
+                className="group flex flex-col bg-white border border-brandBorder rounded-[32px] p-8 lg:p-10 hover:border-brandYellow transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(244,196,48,0.15)] relative overflow-hidden"
+              >
+                {/* Top Row: Icon & Arrow */}
+                <div className="flex justify-between items-start mb-12">
+                  <div className="w-14 h-14 rounded-full bg-brandLight flex items-center justify-center text-brandPrimary group-hover:bg-brandYellow group-hover:text-white transition-colors duration-500">
+                    <IconComponent className="w-6 h-6" strokeWidth={1.5} />
+                  </div>
+                  <div className="w-10 h-10 rounded-full border border-brandBorder flex items-center justify-center text-brandMuted group-hover:border-brandYellow group-hover:bg-brandYellow group-hover:text-white transition-all duration-500">
+                    <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-500" />
+                  </div>
                 </div>
-                <div className="w-10 h-10 rounded-full border border-brandBorder flex items-center justify-center text-brandMuted group-hover:border-brandYellow group-hover:bg-brandYellow group-hover:text-white transition-all duration-500">
-                  <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-500" />
-                </div>
-              </div>
 
-              {/* Content */}
-              <div className="mt-auto">
-                <h3 className="text-brandPrimary font-bold text-xl mb-2">{method.title}</h3>
-                <p className="text-brandMuted text-sm mb-6">{method.description}</p>
-                <div className="text-brandPrimary font-bold text-lg border-t border-brandBorder pt-6 group-hover:text-brandYellow transition-colors duration-500">
-                  {method.info}
+                {/* Content */}
+                <div className="mt-auto">
+                  <h3 className="text-brandPrimary font-bold text-xl mb-2">{method.title}</h3>
+                  <p className="text-brandMuted text-sm mb-6">{method.description}</p>
+                  <div className="text-brandPrimary font-bold text-lg border-t border-brandBorder pt-6 group-hover:text-brandYellow transition-colors duration-500">
+                    {method.info}
+                  </div>
                 </div>
-              </div>
-              
-              {/* Subtle background glow effect on hover */}
-              <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-brandYellow/10 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-            </motion.a>
-          ))}
+                
+                {/* Subtle background glow effect on hover */}
+                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-brandYellow/10 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              </motion.a>
+            );
+          })}
         </motion.div>
       </div>
     </section>

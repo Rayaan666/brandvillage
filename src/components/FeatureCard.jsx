@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import * as LucideIcons from 'lucide-react';
 
 const FeatureCard = ({ feature, index }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const Icon = feature.icon;
+  const Icon = LucideIcons[feature.iconName] || feature.icon || LucideIcons.TrendingUp;
 
   return (
     <motion.a

@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import PurposePanel from './PurposePanel';
 
-const PurposeFeature = () => {
+const PurposeFeature = ({ content }) => {
   const [hoveredPanel, setHoveredPanel] = useState(null);
+  const image = content?.image || "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/brandvillage_uzxku7";
+  const visionText = content?.visionText || "To become a destination where discovering respected brands, exceptional value, and everyday style always feels exciting.";
+  const missionText = content?.missionText || "To make recognised brands more accessible by combining genuine savings, variety, convenience, and an enjoyable shopping experience.";
 
   const imageScale = hoveredPanel === 'vision' ? 1.02 : hoveredPanel === 'mission' ? 1.04 : 1;
 
@@ -20,7 +23,7 @@ const PurposeFeature = () => {
         {/* Left Visual Area */}
         <div className="lg:w-[55%] relative overflow-hidden min-h-[350px] lg:min-h-full">
           <motion.img
-            src="https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/brandvillage_uzxku7"
+            src={image}
             alt="About Brand Village"
             className="absolute inset-0 w-full h-full object-cover"
             animate={{ scale: imageScale }}
@@ -48,7 +51,7 @@ const PurposeFeature = () => {
           <PurposePanel 
             number="01"
             label="OUR VISION"
-            text="To become a destination where discovering respected brands, exceptional value, and everyday style always feels exciting."
+            text={visionText}
             onHoverStart={() => setHoveredPanel('vision')}
             onHoverEnd={() => setHoveredPanel(null)}
             isFirst={true}
@@ -57,7 +60,7 @@ const PurposeFeature = () => {
           <PurposePanel 
             number="02"
             label="OUR MISSION"
-            text="To make recognised brands more accessible by combining genuine savings, variety, convenience, and an enjoyable shopping experience."
+            text={missionText}
             onHoverStart={() => setHoveredPanel('mission')}
             onHoverEnd={() => setHoveredPanel(null)}
             isFirst={false}

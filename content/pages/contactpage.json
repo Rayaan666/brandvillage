@@ -1,0 +1,115 @@
+{
+  "heroSection": {
+    "eyebrow": "Contact Brand Village",
+    "titleLine1": "Let's Start",
+    "titleLine2": "A Conversation.",
+    "description": "Whether you're looking for a product, need assistance, or simply have a question, our team is always ready to help you experience the best of outlet retail.",
+    "button1Text": "Visit Our Store",
+    "button1Url": "https://www.google.com/maps/place/Brand+village+outlet/@25.2638788,55.3165515,17z/data=!4m6!3m5!1s0x3e5f5d0005e2ab7b:0xfc733466a6642162!8m2!3d25.2638788!4d55.3165515!16s%2Fg%2F11wsp0s4h2",
+    "button2Text": "Chat on WhatsApp",
+    "button2Url": "https://wa.me/971581234560",
+    "image": "/uploads/contact.png",
+    "imageAlt": "Brand Village Outlet Store"
+  },
+  "contactCards": [
+    {
+      "iconName": "Phone",
+      "title": "Phone Support",
+      "description": "Landline: +971 4 335 3845",
+      "info": "+971 58 123 4560",
+      "actionText": "Call us",
+      "link": "tel:+971581234560"
+    },
+    {
+      "iconName": "Mail",
+      "title": "Email",
+      "description": "Send us your enquiries",
+      "info": "info@brandvillage.ae",
+      "actionText": "Email us",
+      "link": "mailto:info@brandvillage.ae"
+    },
+    {
+      "iconName": "MessageCircle",
+      "title": "WhatsApp",
+      "description": "Instant product assistance",
+      "info": "+971 58 123 4560",
+      "actionText": "Chat now",
+      "link": "https://wa.me/971581234560"
+    },
+    {
+      "iconName": "MapPin",
+      "title": "Store Address",
+      "description": "Al Maktoum Rd, Deira, Dubai",
+      "info": "Brand Village Outlet",
+      "actionText": "Get directions",
+      "link": "https://www.google.com/maps/place/Brand+village+outlet/@25.2638788,55.3165515,17z/data=!4m6!3m5!1s0x3e5f5d0005e2ab7b:0xfc733466a6642162!8m2!3d25.2638788!4d55.3165515!16s%2Fg%2F11wsp0s4h2"
+    }
+  ],
+  "reachUsSection": {
+    "eyebrow": "How To Connect",
+    "title": "Ways To Reach Us",
+    "methods": [
+      {
+        "iconName": "Phone",
+        "title": "Call Us",
+        "description": "Speak directly with our customer support team for immediate assistance.",
+        "primaryText": "+971 58 123 4560",
+        "primaryLink": "tel:+971581234560",
+        "secondaryText": "Landline: +971 4 335 3845",
+        "secondaryLink": "tel:+97143353845"
+      },
+      {
+        "iconName": "Mail",
+        "title": "Email Us",
+        "description": "We'll get back to you as quickly as possible with detailed information.",
+        "primaryText": "info@brandvillage.ae",
+        "primaryLink": "mailto:info@brandvillage.ae"
+      },
+      {
+        "iconName": "MessageCircle",
+        "title": "WhatsApp",
+        "description": "Instant assistance for product enquiries and stock availability.",
+        "primaryText": "Start Chat",
+        "primaryLink": "https://wa.me/971581234560"
+      }
+    ]
+  },
+  "formSection": {
+    "title": "Need Assistance?",
+    "description": "Fill out the form below and our customer support team will assist you with any questions about products, availability, or store policies.",
+    "formspreeUrl": "https://formspree.io/f/mbgrpldj",
+    "buttonText": "Send Enquiry"
+  },
+  "whatsappBanner": {
+    "title": "Need A Faster Response?",
+    "description": "Our dedicated team is available on WhatsApp to help you with product enquiries, store information and stock availability in real-time.",
+    "buttonText": "Chat With Us",
+    "buttonUrl": "https://wa.me/971581234560"
+  },
+  "faqSection": {
+    "eyebrow": "Support",
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "Do you have all products available in store?",
+        "answer": "While we feature a wide selection of premium products in our physical location, some items shown online may be exclusive to specific collections or have limited availability. We recommend checking with our team via WhatsApp for real-time stock updates."
+      },
+      {
+        "question": "Can I reserve products?",
+        "answer": "Yes, we offer a reservation service for up to 48 hours. You can request a reservation by contacting our customer support team through WhatsApp or by calling the store directly. Please have the product code ready."
+      },
+      {
+        "question": "How can I enquire about availability?",
+        "answer": "The fastest way to check availability is by using the 'Chat on WhatsApp' button found on any product page. This will automatically pre-fill a message with the product details for our team to check instantly."
+      },
+      {
+        "question": "Do you accept returns?",
+        "answer": "We offer a 14-day exchange policy for all items purchased in-store, provided they are in their original condition with tags attached and accompanied by the original receipt. Refunds are issued as store credit only."
+      },
+      {
+        "question": "How do I contact customer support?",
+        "answer": "Our customer support team is available via Phone (+971 58 123 4560), Email (info@brandvillage.ae), and WhatsApp during regular store hours. For the quickest response regarding products, we recommend using WhatsApp."
+      }
+    ]
+  }
+}

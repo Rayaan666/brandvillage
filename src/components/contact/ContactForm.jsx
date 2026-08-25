@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const ContactForm = () => {
+const ContactForm = ({ content }) => {
+  const title = content?.title || "Need Assistance?";
+  const description = content?.description || "Fill out the form below and our customer support team will assist you with any questions about products, availability, or store policies.";
+  const formspreeUrl = content?.formspreeUrl || "https://formspree.io/f/mbgrpldj";
+  const buttonText = content?.buttonText || "Send Enquiry";
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     subject: '',
     message: '',
-    preferredContact: 'Email',
+    preference: 'Email',
     consent: false
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -20,12 +27,51 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-    alert('Thank you for your enquiry. We will get back to you shortly.');
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch(formspreeUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+          'preferred-contact-method': formData.preference,
+          consent: formData.consent ? 'Yes' : 'No'
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+          preference: 'Email',
+          consent: false
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   return (
     <section className="w-full bg-white py-12 lg:py-20">
@@ -40,7 +86,7 @@ const ContactForm = () => {
             transition={{ duration: 0.6 }}
             className="text-brandPrimary font-extrabold text-4xl lg:text-5xl tracking-tight mb-4"
           >
-            Need Assistance?
+            {title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +95,7 @@ const ContactForm = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-brandMuted text-base md:text-lg leading-relaxed max-w-xl"
           >
-            Fill out the form below and our customer support team will assist you with any questions about products, availability, or store policies.
+            {description}
           </motion.p>
         </div>
 
@@ -175,10 +221,23 @@ const ContactForm = () => {
             {/* Submit Button */}
             <button 
               type="submit"
-              className="mt-4 bg-brandPrimary text-white font-bold text-sm tracking-wide py-5 rounded-full hover:bg-brandYellow hover:text-brandPrimary transition-colors duration-300 cursor-pointer"
+              disabled={isSubmitting}
+              className={`mt-4 bg-brandPrimary text-white font-bold text-sm tracking-wide py-5 rounded-full hover:bg-brandYellow hover:text-brandPrimary transition-colors duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
             >
-              Send Enquiry
+              {isSubmitting ? 'Sending...' : buttonText}
             </button>
+
+            {/* Form feedback status */}
+            {submitStatus === 'success' && (
+              <div className="mt-4 p-4 text-green-800 bg-green-50 rounded-xl border border-green-200 text-center font-medium">
+                Thank you! Your enquiry has been sent successfully. We will get back to you shortly.
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="mt-4 p-4 text-red-800 bg-red-50 rounded-xl border border-red-200 text-center font-medium">
+                Oops! There was an issue submitting your enquiry. Please try again or contact us directly.
+              </div>
+            )}
 
           </form>
         </motion.div>

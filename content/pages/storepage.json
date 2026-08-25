@@ -1,0 +1,86 @@
+{
+  "heroSection": {
+    "eyebrow": "BRAND VILLAGE STORE",
+    "titleLine1": "Discover More.",
+    "titleLine2": "Choose What Speaks to You.",
+    "description": "Explore fashion, footwear, accessories, beauty, home and lifestyle products from a curated selection of recognised brands.",
+    "buttonText": "Explore Products",
+    "buttonUrl": "https://www.google.com/maps/place/Brand+village+outlet/@25.2638788,55.3165515,17z/data=!4m6!3m5!1s0x3e5f5d0005e2ab7b:0xfc733466a6642162!8m2!3d25.2638788!4d55.3165515!16s%2Fg%2F11wsp0s4h2",
+    "availabilityText": "Product availability may vary. Contact us on WhatsApp for current details.",
+    "image": "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/MFD05534.jpg_rzilbv",
+    "imageAlt": "Premium retail interior with shoppers and fashion items"
+  },
+  "collectionsShowcase": {
+    "intro": {
+      "subheading": "EXPLORE OUR COLLECTIONS",
+      "headingLine1": "Find Something",
+      "headingLine2": "For",
+      "headingHighlight": "Everyone.",
+      "description": "From everyday essentials to stylish fashion and home inspiration, discover carefully curated collections designed for every member of the family."
+    },
+    "collections": [
+      {
+        "label": "MEN'S COLLECTION",
+        "heading": "Refined Style.\nEveryday Confidence.",
+        "supportingText": "Discover versatile fashion designed for work, weekends and everything in between.",
+        "ctaText": "Explore Men's Collection",
+        "linkText": "View Products →",
+        "image": "/uploads/men's-fashion.png",
+        "imageAlt": "Luxury menswear and modern clothing display",
+        "bgWord": "MEN",
+        "layout": "content-left"
+      },
+      {
+        "label": "WOMEN'S COLLECTION",
+        "heading": "Modern Elegance.\nEffortlessly Yours.",
+        "supportingText": "Explore fashion, accessories and lifestyle pieces created for everyday confidence.",
+        "ctaText": "Explore Women's Collection",
+        "linkText": "View Products →",
+        "image": "/uploads/women's-fashion.png",
+        "imageAlt": "Elegant fashion and handbag in modern boutique",
+        "bgWord": "WOMEN",
+        "layout": "content-right"
+      },
+      {
+        "label": "KIDS COLLECTION",
+        "heading": "Made For\nLittle Adventures.",
+        "supportingText": "Bright, comfortable and playful essentials designed for growing personalities.",
+        "ctaText": "Explore Kids Collection",
+        "linkText": "View Products →",
+        "image": "/uploads/kids.png",
+        "imageAlt": "Playful children's clothing essentials",
+        "bgWord": "KIDS",
+        "layout": "content-left"
+      },
+      {
+        "label": "HOME COLLECTION",
+        "heading": "Bring Comfort\nHome.",
+        "supportingText": "Discover home essentials, décor and lifestyle products that make every space feel welcoming.",
+        "ctaText": "Explore Home Collection",
+        "linkText": "View Products →",
+        "image": "/uploads/home.png",
+        "imageAlt": "Minimalist living room decor and soft furnishings",
+        "bgWord": "HOME",
+        "layout": "content-right"
+      }
+    ]
+  },
+  "visitBanner": {
+    "eyebrow": "VISIT BRAND VILLAGE OUTLET",
+    "titleLine1": "See It. Try It.",
+    "titleLine2": "Take It Home.",
+    "description": "Visit our store to explore current collections, discover new arrivals and receive personalised assistance from our team.",
+    "button1Text": "Get Directions",
+    "button1Url": "https://www.google.com/maps/place/Brand+village+outlet/@25.2638788,55.3165515,17z/data=!4m6!3m5!1s0x3e5f5d0005e2ab7b:0xfc733466a6642162!8m2!3d25.2638788!4d55.3165515!16s%2Fg%2F11wsp0s4h2",
+    "button2Text": "Contact the Store",
+    "button2Url": "https://wa.me/971581234560",
+    "image": "/uploads/brand-village.png",
+    "imageAlt": "Premium outlet interior with warm lighting"
+  },
+  "whatsappCta": {
+    "title": "Looking for Something Specific?",
+    "description": "Send us a message with the product, category, size, colour or style you are looking for, and our team will assist you.",
+    "buttonText": "Chat With Us on WhatsApp",
+    "noteText": "We’ll help you check availability and product details."
+  }
+}

@@ -1,20 +1,21 @@
 import React from 'react';
 import CollectionIntro from './CollectionIntro';
 import CollectionBanner from './CollectionBanner';
-import { collections } from '../../data/collections';
 
-const CollectionShowcase = () => {
+const CollectionShowcase = ({ content }) => {
+  if (!content) return null;
+
   return (
     <section className="w-full bg-brandWarm pb-12 md:pb-16 overflow-hidden">
-      <CollectionIntro />
+      <CollectionIntro intro={content.intro} />
       
       {/* Spacer between intro and first banner */}
       <div className="h-6 md:h-8"></div>
       
       <div className="w-full flex flex-col items-center">
-        {collections.map((collection) => (
+        {content.collections?.map((collection, index) => (
           <CollectionBanner 
-            key={collection.id}
+            key={index}
             collection={collection}
           />
         ))}

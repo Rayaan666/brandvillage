@@ -1,0 +1,192 @@
+fragment HomepageParts on Homepage {
+  __typename
+  heroSlides {
+    __typename
+    image
+    mobileImage
+    imageAlt
+  }
+  aboutSection {
+    __typename
+    eyebrow
+    subTitle
+    titleLine1
+    titleLine2
+    description
+    linkText
+  }
+  purposeSection {
+    __typename
+    image
+    visionText
+    missionText
+  }
+  whyChooseUs {
+    __typename
+    eyebrow
+    titleLine1
+    titleLine2
+    description
+  }
+  identityCards {
+    __typename
+    number
+    label
+    title
+    description
+    supportingText
+    image
+    imageAlt
+    href
+  }
+  features {
+    __typename
+    number
+    label
+    title
+    description
+    iconName
+    image
+    imageAlt
+  }
+  ctaSection {
+    __typename
+    eyebrow
+    title
+    description
+    primaryButtonText
+    primaryButtonUrl
+    secondaryButtonText
+    secondaryButtonUrl
+  }
+}
+
+fragment StorepageParts on Storepage {
+  __typename
+  heroSection {
+    __typename
+    eyebrow
+    titleLine1
+    titleLine2
+    description
+    buttonText
+    buttonUrl
+    availabilityText
+    image
+    imageAlt
+  }
+  collectionsShowcase {
+    __typename
+    intro {
+      __typename
+      subheading
+      headingLine1
+      headingLine2
+      headingHighlight
+      description
+    }
+    collections {
+      __typename
+      label
+      heading
+      supportingText
+      ctaText
+      linkText
+      image
+      imageAlt
+      bgWord
+      layout
+    }
+  }
+  visitBanner {
+    __typename
+    eyebrow
+    titleLine1
+    titleLine2
+    description
+    button1Text
+    button1Url
+    button2Text
+    button2Url
+    image
+    imageAlt
+  }
+  whatsappCta {
+    __typename
+    title
+    description
+    buttonText
+    noteText
+  }
+}
+
+fragment ContactpageParts on Contactpage {
+  __typename
+  heroSection {
+    __typename
+    eyebrow
+    titleLine1
+    titleLine2
+    description
+    button1Text
+    button1Url
+    button2Text
+    button2Url
+    image
+    imageAlt
+  }
+  contactCards {
+    __typename
+    iconName
+    title
+    description
+    info
+    actionText
+    link
+  }
+  reachUsSection {
+    __typename
+    eyebrow
+    title
+    methods {
+      __typename
+      iconName
+      title
+      description
+      primaryText
+      primaryLink
+      secondaryText
+      secondaryLink
+    }
+  }
+  formSection {
+    __typename
+    title
+    description
+    formspreeUrl
+    buttonText
+  }
+  whatsappBanner {
+    __typename
+    title
+    description
+    buttonText
+    buttonUrl
+  }
+  faqSection {
+    __typename
+    eyebrow
+    title
+    faqs {
+      __typename
+      question
+      answer
+    }
+  }
+}
+
+fragment PostParts on Post {
+  __typename
+  title
+  body
+}

@@ -4,21 +4,22 @@ import { heroSlides } from '../data/heroSlides';
 import HeroSlide from './HeroSlide';
 import SliderControls from './SliderControls';
 
-const HeroSlider = () => {
+const HeroSlider = ({ slides }) => {
+  const activeSlides = slides && slides.length > 0 ? slides : heroSlides;
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
-  const totalSlides = heroSlides.length;
+  const totalSlides = activeSlides.length;
   const AUTOPLAY_TIME = 5500;
   
   // Preload images
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
-    heroSlides.forEach((slide) => {
+    activeSlides.forEach((slide) => {
       const img = new Image();
       img.src = isMobile && slide.mobileImage ? slide.mobileImage : slide.image;
     });
-  }, []);
+  }, [activeSlides]);
 
   const nextSlide = useCallback(() => {
     setCurrent((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
@@ -81,10 +82,10 @@ const HeroSlider = () => {
       onTouchEnd={handleTouchEnd}
     >
       <AnimatePresence initial={false}>
-        {heroSlides.map((slide, index) => (
+        {activeSlides.map((slide, index) => (
           index === current && (
             <HeroSlide 
-              key={slide.id} 
+              key={slide.id || index} 
               slide={slide} 
               isActive={true} 
             />
