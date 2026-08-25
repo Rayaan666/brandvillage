@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "tinacms dev -c \"vite\"",
-    "build": "tinacms build && vite build",
+    "build": "vite build && tinacms build",
     "lint": "oxlint",
-    "preview": "tinacms build && vite preview"
+    "preview": "vite preview && tinacms build"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
