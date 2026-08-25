@@ -15,7 +15,7 @@ export default defineConfig({
 
   build: {
     outputFolder: "admin",
-    publicFolder: process.env.NODE_ENV === "production" ? "dist" : "public",
+    publicFolder: "public",
   },
   media: {
     tina: {

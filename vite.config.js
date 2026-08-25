@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     {
       name: 'tinacms-build',
-      closeBundle() {
+      buildStart() {
         // Only run during production build
         if (process.env.NODE_ENV === 'production') {
           try {
