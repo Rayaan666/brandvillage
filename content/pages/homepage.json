@@ -1,9 +1,14 @@
 {
   "heroSlides": [
     {
-      "image": "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/ChatGPT_Image_Aug_25_2026_02_05_44_AM",
-      "mobileImage": "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/ChatGPT_Image_Aug_25_2026_02_05_44_AM",
-      "imageAlt": "Brand Village Outlet"
+      "image": "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/Untitled_design_-_2026-08-26T092026.185",
+      "mobileImage": "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/Untitled_design_92_b471cg",
+      "imageAlt": "Brand Village Outlet Slide 1"
+    },
+    {
+      "image": "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/Untitled_design_-_2026-08-26T092157.684",
+      "mobileImage": "https://res.cloudinary.com/n185h1km/image/upload/f_auto,q_auto/Untitled_design_93_lz3qer",
+      "imageAlt": "Brand Village Outlet Slide 2"
     }
   ],
   "aboutSection": {
